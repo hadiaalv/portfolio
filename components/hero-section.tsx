@@ -29,7 +29,7 @@ export function HeroSection() {
                 <span className="text-sm font-medium text-accent">Available for Work</span>
                 <div className="flex items-center space-x-1 text-muted-foreground">
                   <MapPin className="w-3 h-3" />
-                  <span className="text-xs">Faisalabd, Pakistan</span>
+                  <span className="text-xs">Faisalabd,</span>
                 </div>
               </div>
 
