@@ -16,24 +16,24 @@ export function HeroSection() {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16">
-      <Card className="w-full max-w-7xl mx-4 h-[600px] bg-gradient-to-br from-background via-card to-muted relative overflow-hidden border-2 border-primary/20">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 w-full">
+      <Card className="w-full min-h-[calc(100vh-4rem)] bg-gradient-to-br from-background via-card to-muted relative overflow-hidden border-2 border-primary/20">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="currentColor" />
 
-        <div className="flex h-full">
+        <div className="flex h-full min-h-[calc(100vh-4rem)]">
           {/* Left content */}
-          <div className="flex-1 p-8 lg:p-12 relative z-10 flex flex-col justify-center">
+          <div className="flex-1 p-8 lg:p-12 xl:p-16 relative z-10 flex flex-col justify-center max-w-3xl">
             <div className="animate-slide-in-up">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium text-accent">Available for Work</span>
                 <div className="flex items-center space-x-1 text-muted-foreground">
                   <MapPin className="w-3 h-3" />
-                  <span className="text-xs">San Francisco, CA</span>
+                  <span className="text-xs">Faisalabd, Pakistan</span>
                 </div>
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
                 <span className="text-foreground">Hi, I'm a</span>
                 <br />
                 <span className="gradient-text">Full-Stack</span>
@@ -41,7 +41,7 @@ export function HeroSection() {
                 <span className="gradient-text">Developer</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-muted-foreground max-w-lg mb-6 leading-relaxed">
+              <p className="text-lg md:text-xl xl:text-2xl text-muted-foreground max-w-2xl mb-6 leading-relaxed">
                 I craft exceptional digital experiences using modern technologies like React, Next.js, and Node.js.
                 Passionate about clean code, scalable architecture, and innovative solutions.
               </p>
