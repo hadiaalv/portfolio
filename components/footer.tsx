@@ -9,11 +9,12 @@ export function Footer() {
   }
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "#", label: "Email" },
-  ]
+  { icon: Github, href: "https://github.com/hadiaalv", label: "GitHub" },
+  { icon: Twitter, href: "https://twitter.com/hadiaalv", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/hadia-alvi-9a68272b1/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:hadiaalvi18@proton.me", label: "Email" },
+];
+
 
   const footerLinks = [
     {
