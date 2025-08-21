@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Code2, Database, Cloud, Smartphone, Palette, Shield, Zap, Globe } from "lucide-react"
+import { Code2, Database, Brain } from "lucide-react"
 
 export function TechStackSection() {
   const techCategories = [
@@ -15,45 +15,16 @@ export function TechStackSection() {
     {
       icon: Database,
       title: "Backend",
-      skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis", "GraphQL"],
+      skills: ["Node.js", "Python", "PostgreSQL", "MongoDB"],
       color: "text-green-500",
     },
     {
-      icon: Cloud,
-      title: "Cloud & DevOps",
-      skills: ["AWS", "Docker", "Kubernetes", "Vercel", "GitHub Actions", "Terraform"],
-      color: "text-purple-500",
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile",
-      skills: ["React Native", "Flutter", "iOS", "Android", "Expo", "PWA"],
-      color: "text-orange-500",
-    },
-    {
-      icon: Palette,
-      title: "Design & UX",
-      skills: ["Figma", "Adobe XD", "Sketch", "Prototyping", "UI/UX", "Design Systems"],
-      color: "text-pink-500",
-    },
-    {
-      icon: Shield,
-      title: "Security",
-      skills: ["OAuth", "JWT", "HTTPS", "Encryption", "Penetration Testing", "OWASP"],
-      color: "text-red-500",
-    },
-    {
-      icon: Zap,
-      title: "Performance",
-      skills: ["Optimization", "Caching", "CDN", "Lighthouse", "Core Web Vitals", "Monitoring"],
-      color: "text-yellow-500",
-    },
-    {
-      icon: Globe,
-      title: "Web3 & Blockchain",
-      skills: ["Ethereum", "Solidity", "Web3.js", "Smart Contracts", "DeFi", "NFTs"],
-      color: "text-cyan-500",
-    },
+      icon: Brain,
+      title: "AI & Machine Learning",
+      skills: ["TensorFlow", "PyTorch", "OpenAI API", "Hugging Face", "Scikit-learn", "Computer Vision"],
+      color: "text-violet-500",
+    }
+    
   ]
 
   return (

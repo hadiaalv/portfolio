@@ -38,7 +38,7 @@ export function Navigation() {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center animate-glow">
               <Code className="w-5 h-5 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold gradient-text">Hadia Alvi</span>
+            <span className="text-xl font-bold gradient-text">TechFlow</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -53,7 +53,9 @@ export function Navigation() {
                 <span>{item.name}</span>
               </a>
             ))}
-            <Button className="animate-glow">Get Started</Button>
+            <Button className="bg-cyan-500 hover:bg-black text-white transition-all duration-300 animate-glow">
+              Get Started
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -80,7 +82,9 @@ export function Navigation() {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full bg-cyan-500 hover:bg-black text-white transition-all duration-300">
+                  Get Started
+                </Button>
               </div>
             </div>
           </div>
