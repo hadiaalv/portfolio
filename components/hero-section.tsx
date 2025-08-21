@@ -71,17 +71,17 @@ export function HeroSection() {
                     Resume
                   </Button>
                   <Button variant="outline" size="lg" className="group bg-transparent px-3" asChild>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/hadiaalv" target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" className="group bg-transparent px-3" asChild>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/hadia-alvi-9a68272b1/" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" className="group bg-transparent px-3" asChild>
-                    <a href="mailto:your.email@example.com">
+                    <a href="mailto:hadiaalvi18@proton.me">
                       <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     </a>
                   </Button>
