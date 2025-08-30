@@ -10,8 +10,8 @@ export function HeroSection() {
   const handleResumeDownload = () => {
     // Create a sample resume download - replace with your actual resume URL
     const link = document.createElement("a")
-    link.href = "/resume.pdf" // Replace with your actual resume path
-    link.download = "John_Doe_Resume.pdf" // Replace with your name
+    link.href = "/HadiaAlvi.pdf" 
+    link.download = "Hadia_Alvi_Resume.pdf" 
     link.click()
   }
 
@@ -29,7 +29,7 @@ export function HeroSection() {
                 <span className="text-sm font-medium text-accent">Available for Work</span>
                 <div className="flex items-center space-x-1 text-muted-foreground">
                   <MapPin className="w-3 h-3" />
-                  <span className="text-xs">San Francisco, CA</span>
+                  <span className="text-xs">Faisalabad, Pakistan</span>
                 </div>
               </div>
 
