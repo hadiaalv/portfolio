@@ -80,12 +80,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-1 text-sm text-muted-foreground mb-4 md:mb-0">
-            <span>Made with</span>
-            <Heart className="w-4 h-4 text-red-500 animate-pulse" />
-            <span>by TechFlow Team</span>
-          </div>
+        
 
           <div className="flex items-center space-x-4">
             <p className="text-sm text-muted-foreground">© 2024 TechFlow. All rights reserved.</p>
@@ -94,7 +89,7 @@ export function Footer() {
             </Button>
           </div>
         </div>
-      </div>
+      
     </footer>
   )
 }
