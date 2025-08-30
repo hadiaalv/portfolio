@@ -41,7 +41,7 @@ export function Footer() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center animate-glow">
                 <Code className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold gradient-text">TechFlow</span>
+              <span className="text-xl font-bold gradient-text">Hadia Alvi</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
               Building the future of technology with innovative solutions and cutting-edge development tools.
