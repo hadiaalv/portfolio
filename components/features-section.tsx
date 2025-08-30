@@ -91,11 +91,22 @@ export function FeaturesSection() {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="group bg-transparent">
-            View All Projects
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </div>
+            <a
+              href="https://github.com/hadiaalv"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="group bg-transparent hover:text-cyan-400"
+              >
+                View All Projects
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </a>
+          </div>
+
       </div>
     </section>
   )
