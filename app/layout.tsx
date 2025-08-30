@@ -16,7 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio - Full-Stack Developer",
+  title: "Hadia Alvi",
   description: "Modern portfolio showcasing full-stack development expertise",
 }
 
