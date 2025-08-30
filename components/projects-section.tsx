@@ -133,14 +133,24 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button size="lg" variant="outline" className="group bg-transparent" asChild>
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+       <div className="text-center mt-12">
+          <Button
+            size="lg"
+            variant="outline"
+            className="group bg-transparent hover:text-cyan-400 hover:border-cyan-400 transition-colors"
+            asChild
+          >
+            <a
+              href="https://github.com/hadiaalv?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               View All Projects
               <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
             </a>
           </Button>
         </div>
+
       </div>
     </section>
   )
