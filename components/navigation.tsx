@@ -53,7 +53,7 @@ export function Navigation() {
                 <span>{item.name}</span>
               </a>
             ))}
-            <Button className="bg-cyan-500 hover:bg-black text-white transition-all duration-300 animate-glow">
+           <Button className="bg-black hover:bg-gray-800 text-white transition-all duration-300 animate-glow">
               Get Started
             </Button>
           </div>

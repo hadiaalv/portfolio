@@ -97,10 +97,10 @@ export function FeaturesSection() {
               rel="noopener noreferrer"
             >
               <Button
-                size="lg"
-                variant="outline"
-                className="group bg-transparent hover:text-cyan-400"
-              >
+  size="lg"
+  variant="outline"
+  className="group bg-transparent hover:text-black hover:border-black"
+>
                 View All Projects
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>

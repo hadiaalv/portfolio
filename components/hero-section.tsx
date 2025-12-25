@@ -62,48 +62,51 @@ export function HeroSection() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
-                  size="lg"
-                  className="bg-cyan-500 hover:bg-black text-white border-cyan-500 hover:border-black transition-all duration-300 animate-glow group"
-                >
+  size="lg"
+  className="bg-black hover:bg-gray-800 text-white border-black hover:border-gray-800 transition-all duration-300 animate-glow group"
+>
                   View My Work
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <div className="flex gap-2">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="group bg-transparent border-cyan-500 text-cyan-500 hover:bg-black hover:text-white hover:border-black transition-all duration-300"
-                    onClick={handleResumeDownload}
-                  >
+                 <Button
+  variant="outline"
+  size="lg"
+  className="group bg-transparent border-black text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300"
+  onClick={handleResumeDownload}
+>
                     <Download className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                     Resume
                   </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="group bg-transparent border-cyan-500 text-cyan-500 hover:bg-black hover:text-white hover:border-black transition-all duration-300 px-3"
-                    asChild
-                  >
+                 <Button
+  variant="outline"
+  size="lg"
+  className="group bg-transparent border-black text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300 px-3"
+  asChild
+>
+
                     <a href="https://github.com/hadiaalv" target="_blank" rel="noopener noreferrer">
                       <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     </a>
                   </Button>
                   <Button
-                    variant="outline"
-                    size="lg"
-                    className="group bg-transparent border-cyan-500 text-cyan-500 hover:bg-black hover:text-white hover:border-black transition-all duration-300 px-3"
-                    asChild
-                  >
+  variant="outline"
+  size="lg"
+  className="group bg-transparent border-black text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300 px-3"
+  asChild
+>
+
                     <a href="https://www.linkedin.com/in/hadia-alvi-9a68272b1/" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     </a>
                   </Button>
                   <Button
-                    variant="outline"
-                    size="lg"
-                    className="group bg-transparent border-cyan-500 text-cyan-500 hover:bg-black hover:text-white hover:border-black transition-all duration-300 px-3"
-                    asChild
-                  >
+  variant="outline"
+  size="lg"
+  className="group bg-transparent border-black text-black hover:bg-black hover:text-white hover:border-black transition-all duration-300 px-3"
+  asChild
+>
+
                     <a href="mailto:hadiaalvi18@proton.me">
                       <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     </a>

@@ -8,7 +8,7 @@ import { ExternalLink, Github, Star, Calendar } from "lucide-react"
 export function ProjectsSection() {
   const projects = [
     {
-      title: "AI-Powered SaaS Platform",
+      title: "Get Carlo",
       description:
         "Full-stack SaaS application with AI integration, real-time collaboration, and advanced analytics dashboard.",
       image: "/placeholder.svg?height=300&width=500&text=AI+SaaS+Platform",
@@ -135,11 +135,11 @@ export function ProjectsSection() {
 
        <div className="text-center mt-12">
           <Button
-            size="lg"
-            variant="outline"
-            className="group bg-transparent hover:text-cyan-400 hover:border-cyan-400 transition-colors"
-            asChild
-          >
+  size="lg"
+  variant="outline"
+  className="group bg-transparent hover:text-black hover:border-black transition-colors"
+  asChild
+>
             <a
               href="https://github.com/hadiaalv?tab=repositories"
               target="_blank"
