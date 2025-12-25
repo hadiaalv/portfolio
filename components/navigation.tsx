@@ -28,15 +28,15 @@ export function Navigation() {
     <nav
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm" : "bg-transparent",
+        isScrolled ? "bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm" : "bg-white/80 backdrop-blur-sm",
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center animate-glow">
-              <Code className="w-5 h-5 text-primary-foreground" />
+            <div className="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center animate-glow">
+              <Code className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold gradient-text">Hadia Alvi</span>
           </div>
@@ -47,13 +47,13 @@ export function Navigation() {
               <a
                 key={item.name}
                 href={item.href}
-                className="flex items-center space-x-1 text-muted-foreground hover:text-primary transition-colors duration-200 group"
+                className="flex items-center space-x-1 text-gray-700 hover:text-cyan-600 transition-colors duration-200 group"
               >
                 <item.icon className="w-4 h-4 group-hover:animate-float" />
                 <span>{item.name}</span>
               </a>
             ))}
-           <Button className="bg-black hover:bg-gray-800 text-white transition-all duration-300 animate-glow">
+            <Button className="bg-cyan-500 hover:bg-cyan-600 text-white transition-all duration-300 animate-glow">
               Get Started
             </Button>
           </div>
@@ -68,13 +68,13 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-card border-t border-border animate-slide-in-up">
+          <div className="md:hidden bg-white border-t border-gray-200 animate-slide-in-up">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="flex items-center space-x-2 px-3 py-2 text-muted-foreground hover:text-primary hover:bg-muted rounded-md transition-colors duration-200"
+                  className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   <item.icon className="w-4 h-4" />
@@ -82,7 +82,7 @@ export function Navigation() {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-cyan-500 hover:bg-black text-white transition-all duration-300">
+                <Button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white transition-all duration-300">
                   Get Started
                 </Button>
               </div>

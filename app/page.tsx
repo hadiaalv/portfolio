@@ -10,8 +10,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <HeroSection />
-      <TechStackSection />
-      <FeaturesSection />
+      {/* <TechStackSection /> */}
+      {/* <FeaturesSection /> */}
       <ProjectsSection />
       <Footer />
     </main>
