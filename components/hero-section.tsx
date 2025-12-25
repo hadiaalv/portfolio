@@ -36,9 +36,9 @@ export function HeroSection() {
               <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
                 <span className="text-gray-900">Hi, I'm a</span>
                 <br />
-                <span className="gradient-text">Full-Stack</span>
+                <span className="gradient-text">Hadia Alvi</span>
                 <br />
-                <span className="gradient-text">Developer</span>
+                <span className="gradient-text"></span>
               </h1>
 
               <p className="text-lg md:text-xl xl:text-2xl text-gray-700 max-w-2xl mb-6 leading-relaxed">
