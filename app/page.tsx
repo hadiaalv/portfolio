@@ -12,7 +12,7 @@ export default function Home() {
       <HeroSection />
       {/* <TechStackSection /> */}
       {/* <FeaturesSection /> */}
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <Footer />
     </main>
   )

@@ -19,9 +19,9 @@ export function Navigation() {
 
   const navItems = [
     { name: "Home", href: "#home", icon: Globe },
-    { name: "Features", href: "#features", icon: Zap },
+    { name: "Services", href: "#features", icon: Zap },
     { name: "Projects", href: "#projects", icon: Code },
-    { name: "About", href: "#about", icon: Users },
+    
   ]
 
   return (

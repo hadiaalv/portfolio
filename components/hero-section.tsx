@@ -8,7 +8,7 @@ import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-rea
 
 export function HeroSection() {
   const handleResumeDownload = () => {
-    // Create a sample resume download - replace with your actual resume URL
+
     const link = document.createElement("a")
     link.href = "/HadiaAlvi.pdf" 
     link.download = "Hadia_Alvi_Resume.pdf" 
@@ -46,19 +46,6 @@ export function HeroSection() {
                 Passionate about clean code, scalable architecture, and innovative solutions.
               </p>
 
-              <div className="mb-8">
-                <p className="text-sm text-gray-600 mb-3">Tech Stack:</p>
-                <div className="flex flex-wrap gap-2">
-                  {["React", "Next.js", "TypeScript", "Node.js", "Python", "AWS"].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-xs font-medium border border-cyan-200"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
