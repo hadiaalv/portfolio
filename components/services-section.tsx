@@ -99,7 +99,7 @@ export function ServicesSection() {
                   Need a Custom Solution?
                 </h3>
                 <p className="text-white/90 text-lg">
-                  Let's discuss your project requirements and build something amazing together
+                  Let&apos;s discuss your project requirements and build something amazing together
                 </p>
               </div>
               <Button
