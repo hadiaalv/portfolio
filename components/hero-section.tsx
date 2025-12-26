@@ -97,7 +97,7 @@ export function HeroSection() {
           </div>
 
           {/* Right content - Spline Scene - Now visible on mobile too */}
-          <div className="flex-1 relative h-[300px] sm:h-[400px] lg:h-auto lg:min-h-[calc(100vh-4rem)]">
+          <div className="flex-1 relative h-75 sm:h-[400px] lg:h-auto lg:min-h-[calc(100vh-4rem)]">
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
