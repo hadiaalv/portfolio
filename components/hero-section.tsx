@@ -8,7 +8,6 @@ import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-rea
 
 export function HeroSection() {
   const handleResumeDownload = () => {
-
     const link = document.createElement("a")
     link.href = "/HadiaAlvi.pdf" 
     link.download = "Hadia_Alvi_Resume.pdf" 
@@ -20,9 +19,9 @@ export function HeroSection() {
       <Card className="w-full min-h-[calc(100vh-4rem)] bg-gradient-to-br from-white via-gray-50 to-gray-100 relative overflow-hidden border-2 border-cyan-500/30">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="rgb(8, 145, 178)" />
 
-        <div className="flex h-full min-h-[calc(100vh-4rem)]">
+        <div className="flex flex-col lg:flex-row h-full min-h-[calc(100vh-4rem)]">
           {/* Left content */}
-          <div className="flex-1 p-8 lg:p-12 xl:p-16 relative z-10 flex flex-col justify-center max-w-3xl">
+          <div className="flex-1 p-6 sm:p-8 lg:p-12 xl:p-16 relative z-10 flex flex-col justify-center max-w-3xl">
             <div className="animate-slide-in-up">
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
@@ -33,19 +32,16 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 leading-tight">
                 <span className="text-gray-900">Hi, I&apos;m</span>
                 <br />
                 <span className="gradient-text">Hadia Alvi</span>
-                <br />
-                <span className="gradient-text"></span>
               </h1>
 
-              <p className="text-lg md:text-xl xl:text-2xl text-gray-700 max-w-2xl mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl xl:text-2xl text-gray-700 max-w-2xl mb-6 leading-relaxed">
                 I craft exceptional digital experiences using modern technologies like React, Next.js, and Node.js.
                 Passionate about clean code, scalable architecture, and innovative solutions.
               </p>
-
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -100,8 +96,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right content - Spline Scene */}
-          <div className="flex-1 relative hidden lg:block">
+          {/* Right content - Spline Scene - Now visible on mobile too */}
+          <div className="flex-1 relative h-[300px] sm:h-[400px] lg:h-auto lg:min-h-[calc(100vh-4rem)]">
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"

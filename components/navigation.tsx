@@ -1,13 +1,14 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
+import { useRouter, usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Code, Zap, Globe } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function Navigation() {
   const router = useRouter()
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -29,6 +30,25 @@ export function Navigation() {
     router.push("/contact")
   }
 
+  const handleLogoClick = () => {
+    router.push("/")
+  }
+
+  const handleNavClick = (href: string) => {
+    setIsOpen(false)
+    
+    // If we're on a page other than home, navigate to home first
+    if (pathname !== "/") {
+      router.push("/" + href)
+    } else {
+      // If we're on home page, scroll to section
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }
+
   return (
     <nav
       className={cn(
@@ -39,24 +59,27 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <button 
+            onClick={handleLogoClick}
+            className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
             <div className="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center animate-glow">
               <Code className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold gradient-text">Hadia Alvi</span>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className="flex items-center space-x-1 text-gray-700 hover:text-cyan-600 transition-colors duration-200 group"
               >
                 <item.icon className="w-4 h-4 group-hover:animate-float" />
                 <span>{item.name}</span>
-              </a>
+              </button>
             ))}
             <Button 
               onClick={handleGetStarted}
@@ -79,15 +102,14 @@ export function Navigation() {
           <div className="md:hidden bg-white border-t border-gray-200 animate-slide-in-up">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
+                  className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-cyan-600 hover:bg-gray-50 rounded-md transition-colors duration-200 w-full text-left"
                 >
                   <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
-                </a>
+                </button>
               ))}
               <div className="px-3 py-2">
                 <Button 
