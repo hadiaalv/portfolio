@@ -16,7 +16,7 @@ export function Footer() {
 ];
 
 
-  const footerLinks = [
+  const footerLinks: Array<{ title: string; links: string[] }> = [
     // {
     //   title: "Product",
     //   links: ["Features", "Pricing", "Documentation", "API Reference"],

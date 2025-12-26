@@ -1,11 +1,13 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Code, Zap, Globe, Users } from "lucide-react"
+import { Menu, X, Code, Zap, Globe } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function Navigation() {
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -21,8 +23,11 @@ export function Navigation() {
     { name: "Home", href: "#home", icon: Globe },
     { name: "Services", href: "#services", icon: Zap },
     { name: "Projects", href: "#projects", icon: Code },
-    
   ]
+
+  const handleGetStarted = () => {
+    router.push("/contact")
+  }
 
   return (
     <nav
@@ -53,7 +58,10 @@ export function Navigation() {
                 <span>{item.name}</span>
               </a>
             ))}
-            <Button className="bg-cyan-500 hover:bg-cyan-600 text-white transition-all duration-300 animate-glow">
+            <Button 
+              onClick={handleGetStarted}
+              className="bg-cyan-500 hover:bg-cyan-600 text-white transition-all duration-300 animate-glow"
+            >
               Get Started
             </Button>
           </div>
@@ -82,7 +90,13 @@ export function Navigation() {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white transition-all duration-300">
+                <Button 
+                  onClick={() => {
+                    setIsOpen(false)
+                    handleGetStarted()
+                  }}
+                  className="w-full bg-cyan-500 hover:bg-cyan-600 text-white transition-all duration-300"
+                >
                   Get Started
                 </Button>
               </div>

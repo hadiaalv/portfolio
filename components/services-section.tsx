@@ -1,10 +1,13 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Code2, ShoppingCart, Blocks, Wrench } from "lucide-react"
 
 export function ServicesSection() {
+  const router = useRouter()
+
   const services = [
     {
       icon: Code2,
@@ -39,6 +42,10 @@ export function ServicesSection() {
       bgColor: "bg-blue-500/10",
     },
   ]
+
+  const handleGetInTouch = () => {
+    router.push("/contact")
+  }
 
   return (
     <section id="services" className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
@@ -103,6 +110,7 @@ export function ServicesSection() {
                 </p>
               </div>
               <Button
+                onClick={handleGetInTouch}
                 size="lg"
                 className="bg-white text-cyan-600 hover:bg-gray-100 transition-all duration-300 group shadow-lg"
               >
