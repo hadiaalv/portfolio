@@ -17,18 +17,18 @@ export function Footer() {
 
 
   const footerLinks = [
-    {
-      title: "Product",
-      links: ["Features", "Pricing", "Documentation", "API Reference"],
-    },
-    {
-      title: "Company",
-      links: ["About", "Blog", "Careers", "Contact"],
-    },
-    {
-      title: "Resources",
-      links: ["Community", "Help Center", "Partners", "Status"],
-    },
+    // {
+    //   title: "Product",
+    //   links: ["Features", "Pricing", "Documentation", "API Reference"],
+    // },
+    // {
+    //   title: "Company",
+    //   links: ["About", "Blog", "Careers", "Contact"],
+    // },
+    // {
+    //   title: "Resources",
+    //   links: ["Community", "Help Center", "Partners", "Status"],
+    // },
   ]
 
   return (
