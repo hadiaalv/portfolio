@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github, Star, Calendar } from "lucide-react"
+import Image from "next/image"
 
 export function ProjectsSection() {
   const projects = [
@@ -86,9 +87,11 @@ export function ProjectsSection() {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
+                  width={400}
+                  height={192}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 {project.featured && (

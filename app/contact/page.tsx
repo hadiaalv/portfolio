@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -78,7 +78,7 @@ export default function ContactPage() {
               <span className="gradient-text">Get in Touch</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Have a project in mind or just want to say hello? I'd love to hear from you!
+              Have a project in mind? I&apos;d love to hear from you!
             </p>
           </div>
 
@@ -208,7 +208,7 @@ export default function ContactPage() {
 
                     {submitStatus === "success" && (
                       <div className="p-4 bg-emerald-50 border-2 border-emerald-200 rounded-lg text-emerald-700">
-                        Message sent successfully! I'll get back to you soon.
+                        Message sent successfully! I&apos;ll get back to you soon.
                       </div>
                     )}
 

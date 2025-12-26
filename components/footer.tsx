@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Twitter, Linkedin, Mail, Code, Heart, ArrowUp } from "lucide-react"
+import { Github, Twitter, Linkedin, Mail, Code, ArrowUp } from "lucide-react"
 
 export function Footer() {
   const scrollToTop = () => {
