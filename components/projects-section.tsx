@@ -12,44 +12,38 @@ export function ProjectsSection() {
       title: "Get Carlo",
       description:
         "Business website developed using WordPress, focused on professional branding, service presentation, lead generation, and performance optimization with a responsive and user-friendly design.",
-      image: "/home2.png",
+      image: "/hom2.png", // Fixed image path
       tags: ["WordPress", "PHP", "Custom Theme", "Responsive Design", "SEO"],
-      // stars: 1247,
       featured: true,
       year: "2025",
       liveUrl: "https://getcarlo.com.au/",
-      
     },
     {
       title: "RG Travel & Tours",
       description:
         "A modern travel services website built with Next.js and Tailwind CSS, featuring smooth interactive UI, analytics integration, and optimized performance for bookings and information.",
-      image: "/placeholder.svg?height=300&width=500&text=E-Commerce+Platform",
+      image: "/placeholder.svg?height=300&width=500&text=RG+Travel",
       tags: ["Next.js", "React", "Tailwind CSS", "Google Analytics", "GTM", "Framer Motion"],
-      // stars: 892,
       featured: true,
       year: "2025",
       liveUrl: "https://rgtravelandtours.com/",
-      // githubUrl: "https://github.com/yourusername/marketplace",
     },
     {
       title: "Tia & Rose",
       description:
         "An eCommerce fashion store built on Shopify, optimized for conversions with secure payment integrations, analytics tracking, and a smooth, responsive shopping experience.",
-      image: "/placeholder.svg?height=300&width=500&text=DeFi+Protocol",
+      image: "/placeholder.svg?height=300&width=500&text=Tia+Rose",
       tags: [
-    "Shopify",
-    "Ecommerce",
-    "Facebook Pixel",
-    "Styled-Components",
-    "Payment Gateways",
-    "Cloudflare"
-  ],
-      // stars: 2156,
+        "Shopify",
+        "Ecommerce",
+        "Facebook Pixel",
+        "Styled-Components",
+        "Payment Gateways",
+        "Cloudflare"
+      ],
       featured: false,
       year: "2023",
       liveUrl: "https://tiaandrose.com/",
-      // githubUrl: "https://github.com/yourusername/defi-protocol",
     },
     {
       title: "DevOps Automation Suite",
@@ -90,8 +84,8 @@ export function ProjectsSection() {
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  width={400}
-                  height={192}
+                  width={500}
+                  height={300}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 {project.featured && (
@@ -102,10 +96,12 @@ export function ProjectsSection() {
                     <Calendar className="w-3 h-3 text-muted-foreground" />
                     <span className="text-xs font-medium">{project.year}</span>
                   </div>
-                  <div className="flex items-center space-x-1 bg-background/90 backdrop-blur-sm rounded-full px-2 py-1">
-                    <Star className="w-3 h-3 text-yellow-500 fill-current" />
-                    <span className="text-xs font-medium">{project.stars}</span>
-                  </div>
+                  {project.stars && (
+                    <div className="flex items-center space-x-1 bg-background/90 backdrop-blur-sm rounded-full px-2 py-1">
+                      <Star className="w-3 h-3 text-yellow-500 fill-current" />
+                      <span className="text-xs font-medium">{project.stars}</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -131,36 +127,33 @@ export function ProjectsSection() {
                       Live Demo
                     </a>
                   </Button>
-                  <Button size="sm" variant="outline" className="group/btn bg-transparent" asChild>
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-3 h-3 mr-1 group-hover/btn:rotate-12 transition-transform" />
-                      Source
-                    </a>
-                  </Button>
+                  {project.githubUrl && (
+                    <Button size="sm" variant="outline" className="group/btn bg-transparent" asChild>
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-3 h-3 mr-1 group-hover/btn:rotate-12 transition-transform" />
+                        Source
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-       <div className="text-center mt-12">
+        <div className="text-center mt-12">
           <Button
-  size="lg"
-  variant="outline"
-  className="group bg-transparent hover:text-black hover:border-black transition-colors"
-  asChild
->
-            <a
-              href="https://github.com/hadiaalv?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            size="lg"
+            variant="outline"
+            className="group bg-transparent hover:text-black hover:border-black transition-colors"
+            asChild
+          >
+            <a href="/projects">
               View All Projects
               <ExternalLink className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
             </a>
           </Button>
         </div>
-
       </div>
     </section>
   )

@@ -1,0 +1,296 @@
+"use client"
+
+import { useState } from "react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { ExternalLink, Github, Star, Calendar, Filter } from "lucide-react"
+import Image from "next/image"
+
+export default function ProjectsPage() {
+  const [selectedFilter, setSelectedFilter] = useState<string>("All")
+
+  const allProjects = [
+    {
+      title: "Get Carlo",
+      description:
+        "Business website developed using WordPress, focused on professional branding, service presentation, lead generation, and performance optimization with a responsive and user-friendly design.",
+      image: "/home2.png",
+      tags: ["WordPress", "PHP", "Custom Theme", "Responsive Design", "SEO"],
+      category: "WordPress",
+      featured: true,
+      year: "2025",
+      liveUrl: "https://getcarlo.com.au/",
+    },
+    {
+      title: "RG Travel & Tours",
+      description:
+        "A modern travel services website built with Next.js and Tailwind CSS, featuring smooth interactive UI, analytics integration, and optimized performance for bookings and information.",
+      image: "/placeholder.svg?height=300&width=500&text=RG+Travel",
+      tags: ["Next.js", "React", "Tailwind CSS", "Google Analytics", "GTM", "Framer Motion"],
+      category: "Next.js",
+      featured: true,
+      year: "2025",
+      liveUrl: "https://rgtravelandtours.com/",
+    },
+    {
+      title: "Tia & Rose",
+      description:
+        "An eCommerce fashion store built on Shopify, optimized for conversions with secure payment integrations, analytics tracking, and a smooth, responsive shopping experience.",
+      image: "/placeholder.svg?height=300&width=500&text=Tia+Rose",
+      tags: [
+        "Shopify",
+        "Ecommerce",
+        "Facebook Pixel",
+        "Styled-Components",
+        "Payment Gateways",
+        "Cloudflare"
+      ],
+      category: "Shopify",
+      featured: false,
+      year: "2023",
+      liveUrl: "https://tiaandrose.com/",
+    },
+    {
+      title: "Portfolio Website",
+      description:
+        "Modern personal portfolio built with Next.js 16, featuring 3D Spline animations, smooth page transitions, and a responsive design.",
+      image: "/placeholder.svg?height=300&width=500&text=Portfolio",
+      tags: ["Next.js", "React", "Tailwind CSS", "Spline", "TypeScript"],
+      category: "Next.js",
+      featured: false,
+      year: "2024",
+      liveUrl: "#",
+      githubUrl: "https://github.com/hadiaalv",
+    },
+    {
+      title: "E-Commerce Dashboard",
+      description:
+        "Full-stack admin dashboard for managing e-commerce operations with real-time analytics, inventory management, and order tracking.",
+      image: "/placeholder.svg?height=300&width=500&text=Dashboard",
+      tags: ["React", "Node.js", "MongoDB", "Chart.js", "Express"],
+      category: "Full Stack",
+      featured: false,
+      year: "2024",
+      stars: 156,
+      githubUrl: "https://github.com/hadiaalv",
+    },
+    {
+      title: "Task Management App",
+      description:
+        "Collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.",
+      image: "/placeholder.svg?height=300&width=500&text=Task+Manager",
+      tags: ["React", "Firebase", "Material-UI", "Real-time", "Authentication"],
+      category: "React",
+      featured: false,
+      year: "2024",
+      stars: 89,
+      githubUrl: "https://github.com/hadiaalv",
+    },
+    {
+      title: "Weather App",
+      description:
+        "Beautiful weather application with location detection, 7-day forecast, and interactive weather maps using modern APIs.",
+      image: "/placeholder.svg?height=300&width=500&text=Weather",
+      tags: ["React", "API Integration", "Geolocation", "Charts"],
+      category: "React",
+      featured: false,
+      year: "2023",
+      stars: 234,
+      liveUrl: "#",
+      githubUrl: "https://github.com/hadiaalv",
+    },
+    {
+      title: "Blog Platform",
+      description:
+        "Modern blogging platform with markdown support, user authentication, comment system, and SEO optimization.",
+      image: "/placeholder.svg?height=300&width=500&text=Blog",
+      tags: ["Next.js", "MongoDB", "Authentication", "Markdown", "SEO"],
+      category: "Next.js",
+      featured: false,
+      year: "2023",
+      githubUrl: "https://github.com/hadiaalv",
+    },
+  ]
+
+  const categories = ["All", "WordPress", "Shopify", "Next.js", "React", "Full Stack"]
+
+  const filteredProjects = selectedFilter === "All" 
+    ? allProjects 
+    : allProjects.filter(project => project.category === selectedFilter)
+
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <Navigation />
+
+      <div className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16 animate-slide-in-up">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              <span className="gradient-text">All Projects</span>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore my complete portfolio of web development projects
+            </p>
+          </div>
+
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-in-up">
+            <Filter className="w-5 h-5 text-gray-600 self-center" />
+            {categories.map((category) => (
+              <Button
+                key={category}
+                onClick={() => setSelectedFilter(category)}
+                variant={selectedFilter === category ? "default" : "outline"}
+                className={`transition-all duration-300 ${
+                  selectedFilter === category
+                    ? "bg-cyan-500 hover:bg-cyan-600 text-white"
+                    : "hover:border-cyan-500 hover:text-cyan-600"
+                }`}
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, index) => (
+              <Card
+                key={project.title}
+                className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden ${
+                  project.featured ? "border-cyan-500/50 shadow-lg" : "border-gray-200"
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {project.featured && (
+                    <Badge className="absolute top-4 left-4 bg-cyan-500 text-white">
+                      Featured
+                    </Badge>
+                  )}
+                  <div className="absolute top-4 right-4 flex items-center space-x-2">
+                    <div className="flex items-center space-x-1 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1">
+                      <Calendar className="w-3 h-3 text-gray-600" />
+                      <span className="text-xs font-medium">{project.year}</span>
+                    </div>
+                    {project.stars && (
+                      <div className="flex items-center space-x-1 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1">
+                        <Star className="w-3 h-3 text-yellow-500 fill-current" />
+                        <span className="text-xs font-medium">{project.stars}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <CardHeader>
+                  <CardTitle className="text-xl group-hover:text-cyan-600 transition-colors">
+                    {project.title}
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="space-y-4">
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {project.description}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.slice(0, 4).map((tag) => (
+                      <Badge
+                        key={tag}
+                        variant="secondary"
+                        className="text-xs bg-gray-100 hover:bg-cyan-50 hover:text-cyan-600 transition-colors"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                    {project.tags.length > 4 && (
+                      <Badge variant="secondary" className="text-xs">
+                        +{project.tags.length - 4}
+                      </Badge>
+                    )}
+                  </div>
+
+                  <div className="flex space-x-3 pt-2">
+                    {project.liveUrl && (
+                      <Button
+                        size="sm"
+                        className="bg-cyan-500 hover:bg-cyan-600 text-white group/btn"
+                        asChild
+                      >
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-3 h-3 mr-1 group-hover/btn:scale-110 transition-transform" />
+                          View
+                        </a>
+                      </Button>
+                    )}
+                    {project.githubUrl && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="group/btn hover:border-cyan-500 hover:text-cyan-600"
+                        asChild
+                      >
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-3 h-3 mr-1 group-hover/btn:rotate-12 transition-transform" />
+                          Code
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* No Results Message */}
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-20">
+              <p className="text-xl text-gray-600">
+                No projects found in this category.
+              </p>
+            </div>
+          )}
+
+          {/* GitHub CTA */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-2xl p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Want to see more?
+              </h3>
+              <p className="text-white/90 text-lg mb-6">
+                Check out my GitHub for more projects and open source contributions
+              </p>
+              <Button
+                size="lg"
+                className="bg-white text-cyan-600 hover:bg-gray-100 transition-all duration-300 group shadow-lg"
+                asChild
+              >
+                <a
+                  href="https://github.com/hadiaalv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                  Visit GitHub Profile
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </main>
+  )
+}
