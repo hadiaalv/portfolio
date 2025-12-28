@@ -12,7 +12,7 @@ export function ProjectsSection() {
       title: "Get Carlo",
       description:
         "Business website developed using WordPress, focused on professional branding, service presentation, lead generation, and performance optimization with a responsive and user-friendly design.",
-      image: "/hom2.png", // Fixed image path
+      image: "/hom2.png", 
       tags: ["WordPress", "PHP", "Custom Theme", "Responsive Design", "SEO"],
       featured: true,
       year: "2025",
@@ -22,7 +22,7 @@ export function ProjectsSection() {
       title: "RG Travel & Tours",
       description:
         "A modern travel services website built with Next.js and Tailwind CSS, featuring smooth interactive UI, analytics integration, and optimized performance for bookings and information.",
-      image: "/placeholder.svg?height=300&width=500&text=RG+Travel",
+      image: "/rg.png", 
       tags: ["Next.js", "React", "Tailwind CSS", "Google Analytics", "GTM", "Framer Motion"],
       featured: true,
       year: "2025",
@@ -32,7 +32,7 @@ export function ProjectsSection() {
       title: "Tia & Rose",
       description:
         "An eCommerce fashion store built on Shopify, optimized for conversions with secure payment integrations, analytics tracking, and a smooth, responsive shopping experience.",
-      image: "/placeholder.svg?height=300&width=500&text=Tia+Rose",
+      image: "/story.png",
       tags: [
         "Shopify",
         "Ecommerce",
@@ -46,16 +46,22 @@ export function ProjectsSection() {
       liveUrl: "https://tiaandrose.com/",
     },
     {
-      title: "DevOps Automation Suite",
+      title: "Fake News Detector",
       description:
-        "Comprehensive CI/CD pipeline automation with monitoring, deployment orchestration, and infrastructure as code.",
-      image: "/placeholder.svg?height=300&width=500&text=DevOps+Suite",
-      tags: ["Docker", "Kubernetes", "Terraform", "GitHub Actions", "AWS"],
-      stars: 743,
+        "Developed an AI-powered analytics application that processes and visualizes machine learning insights in real time, with an interactive interface designed to make complex data understandable and actionable for users.",
+      image: "/4.jpeg",
+      tags: [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Data Analytics",
+    "Streamlit",
+    "PWA"
+  ],
+      // stars: 743,
       featured: false,
-      year: "2023",
-      liveUrl: "https://devops-suite-demo.vercel.app",
-      githubUrl: "https://github.com/yourusername/devops-suite",
+      year: "2025",
+      liveUrl: "https://fake-news-detector-in-python.streamlit.app/",
+      githubUrl: "https://github.com/hadiaalv/AI-ML-real-life-tasks/tree/main/Fake%20News%20Detection",
     },
   ]
 
