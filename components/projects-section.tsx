@@ -6,8 +6,20 @@ import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github, Star, Calendar } from "lucide-react"
 import Image from "next/image"
 
+interface Project {
+  title: string
+  description: string
+  image: string
+  tags: string[]
+  featured: boolean
+  year: string
+  liveUrl: string
+  githubUrl?: string
+  stars?: number
+}
+
 export function ProjectsSection() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Get Carlo",
       description:
