@@ -39,8 +39,7 @@ export function HeroSection() {
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl xl:text-2xl text-gray-700 max-w-2xl mb-6 leading-relaxed">
-                I craft exceptional digital experiences using modern technologies like React, Next.js, and Node.js.
-                Passionate about clean code, scalable architecture, and innovative solutions.
+                I design and build modern web & AI-powered applications with a strong focus on usability, performance, and real-world impact.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
