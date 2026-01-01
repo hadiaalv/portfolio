@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Code2, ShoppingCart, Blocks, Wrench } from "lucide-react"
+import { ArrowRight, Code2, ShoppingCart, Blocks, Wrench, Workflow, Brain, Database } from "lucide-react"
 
 export function ServicesSection() {
   const router = useRouter()
@@ -24,6 +24,30 @@ export function ServicesSection() {
       features: ["REST & GraphQL APIs", "Microservices", "Database Design", "Authentication"],
       color: "text-red-500",
       bgColor: "bg-red-500/10",
+    },
+    {
+      icon: Workflow,
+      title: "n8n Workflow Automation",
+      description: "Powerful automation workflows using n8n. Connect apps, automate tasks, build complex integrations, and streamline business processes with custom nodes and webhooks.",
+      features: ["Custom Workflows", "API Integrations", "Webhook Automation", "Self-hosted Solutions"],
+      color: "text-purple-500",
+      bgColor: "bg-purple-500/10",
+    },
+    {
+      icon: Brain,
+      title: "AI & Machine Learning",
+      description: "Intelligent solutions powered by Python, TensorFlow, and PyTorch. Natural language processing, computer vision, predictive analytics, and custom ML models tailored to your needs.",
+      features: ["NLP & CV", "Predictive Models", "Data Analysis", "Model Deployment"],
+      color: "text-orange-500",
+      bgColor: "bg-orange-500/10",
+    },
+    {
+      icon: Database,
+      title: "Python Backend & Data Engineering",
+      description: "Robust Python applications using FastAPI, Django, and Flask. Data pipelines, ETL processes, API development, and data science solutions with pandas and NumPy.",
+      features: ["FastAPI & Django", "Data Pipelines", "ETL Processing", "Scientific Computing"],
+      color: "text-yellow-500",
+      bgColor: "bg-yellow-500/10",
     },
     {
       icon: ShoppingCart,
@@ -125,7 +149,24 @@ export function ServicesSection() {
         <div className="mt-16 text-center">
           <p className="text-gray-500 mb-6 font-medium">Technologies I Work With</p>
           <div className="flex flex-wrap justify-center gap-4">
-            {["React", "Next.js", "NestJS", "TypeScript", "Node.js", "Shopify", "WordPress", "PostgreSQL", "MongoDB", "Tailwind CSS"].map((tech) => (
+            {[
+              "React",
+              "Next.js",
+              "NestJS",
+              "TypeScript",
+              "Node.js",
+              "Python",
+              "FastAPI",
+              "Django",
+              "TensorFlow",
+              "PyTorch",
+              "n8n",
+              "Shopify",
+              "WordPress",
+              "PostgreSQL",
+              "MongoDB",
+              "Tailwind CSS"
+            ].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 bg-white border-2 border-gray-200 rounded-lg text-gray-700 font-medium hover:border-cyan-500 hover:text-cyan-600 transition-colors cursor-default"
