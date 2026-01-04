@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useRouter, usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Code, Zap, Globe } from "lucide-react"
+import { Menu, X, Code, Zap, Globe, Trophy } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export function Navigation() {
@@ -24,6 +24,7 @@ export function Navigation() {
     { name: "Home", href: "#home", icon: Globe },
     { name: "Services", href: "#services", icon: Zap },
     { name: "Projects", href: "#projects", icon: Code },
+    { name: "Achievements", href: "#achievements", icon: Trophy },
   ]
 
   const handleGetStarted = () => {
