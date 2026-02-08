@@ -63,10 +63,7 @@ export default function ProjectsPage() {
       ],
       category: "Shopify",
       featured: true,
-      year: "2025",
-      liveUrl: "https://tiaandrose.com/",
-      githubUrl: undefined,
-      stars: undefined,
+        year: "2023",
     },
     {
   title: "GradeMate",
@@ -86,10 +83,7 @@ export default function ProjectsPage() {
   category: "AI / Education",
   featured: true,
   year: "2026",
-  liveUrl: undefined,
-  githubUrl: undefined,
-  stars: undefined,
-},
+    },
 
     {
   title: "BlacKandleS",
@@ -110,13 +104,11 @@ export default function ProjectsPage() {
   featured: true,
   year: "2025",
   liveUrl: "https://www.blackandles.com.au/",
-  githubUrl: undefined,
-  stars: undefined,
 }
 
   ]
 
-  const categories = ["All", "WordPress", "Next.js", "Shopify"]
+  const categories = ["All", "WordPress", "Next.js", "Shopify", "AI / Education"]
 
   const filteredProjects = selectedFilter === "All" 
     ? allProjects 
