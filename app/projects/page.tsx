@@ -9,10 +9,23 @@ import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github, Star, Calendar, Filter } from "lucide-react"
 import Image from "next/image"
 
+interface Project {
+  title: string
+  description: string
+  image: string
+  tags: string[]
+  category: string
+  featured: boolean
+  year: string
+  liveUrl: string
+  githubUrl?: string
+  stars?: number
+}
+
 export default function ProjectsPage() {
   const [selectedFilter, setSelectedFilter] = useState<string>("All")
 
-  const allProjects = [
+  const allProjects: Project[] = [
     {
       title: "Get Carlo",
       description:
@@ -21,10 +34,8 @@ export default function ProjectsPage() {
       tags: ["WordPress", "PHP", "Custom Theme", "Responsive Design", "SEO"],
       category: "WordPress",
       featured: true,
-      // year: "2025",
+      year: "2025",
       liveUrl: "https://getcarlo.com.au/",
-      githubUrl: undefined,
-      stars: undefined,
     },
     {
       title: "RG Travel & Tours",
@@ -34,10 +45,8 @@ export default function ProjectsPage() {
       tags: ["Next.js", "React", "Tailwind CSS", "Google Analytics", "GTM", "Framer Motion"],
       category: "Next.js",
       featured: true,
-      // year: "2025",
+      year: "2025",
       liveUrl: "https://rgtravelandtours.com/",
-      githubUrl: undefined,
-      stars: undefined,
     },
     {
       title: "Tia & Rose",
@@ -54,11 +63,34 @@ export default function ProjectsPage() {
       ],
       category: "Shopify",
       featured: true,
-      // year: "2023",
+      year: "2025",
       liveUrl: "https://tiaandrose.com/",
       githubUrl: undefined,
       stars: undefined,
     },
+    {
+  title: "GradeMate",
+  description:
+    "An AI-powered answer evaluation system that grades student responses with semantic similarity analysis, Bloom’s Taxonomy classification, grammar checking, and safety validation. Built using Hugging Face Transformers, Sentence Transformers, LanguageTool, and Gradio for an interactive web interface.",
+  image: "/mate.png",
+  tags: [
+    "Python",
+    "Hugging Face",
+    "Transformers",
+    "Sentence Transformers",
+    "LanguageTool",
+    "Gradio",
+    "AI",
+    "Semantic Analysis"
+  ],
+  category: "AI / Education",
+  featured: true,
+  year: "2026",
+  liveUrl: undefined,
+  githubUrl: undefined,
+  stars: undefined,
+},
+
     {
   title: "BlacKandleS",
   description:
@@ -76,7 +108,7 @@ export default function ProjectsPage() {
   ],
   category: "Shopify",
   featured: true,
-  // year: "2023",
+  year: "2025",
   liveUrl: "https://www.blackandles.com.au/",
   githubUrl: undefined,
   stars: undefined,
