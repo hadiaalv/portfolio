@@ -17,7 +17,7 @@ interface Project {
   category: string
   featured: boolean
   year: string
-  liveUrl: string
+  liveUrl?: string
   githubUrl?: string
   stars?: number
 }
