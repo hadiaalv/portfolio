@@ -17,29 +17,33 @@ export default function ProjectsPage() {
       title: "Get Carlo",
       description:
         "Business website developed using WordPress, focused on professional branding, service presentation, lead generation, and performance optimization with a responsive and user-friendly design.",
-      image: "/home2.png",
+      image: "/hom2.png",
       tags: ["WordPress", "PHP", "Custom Theme", "Responsive Design", "SEO"],
       category: "WordPress",
       featured: true,
-      year: "2025",
+      // year: "2025",
       liveUrl: "https://getcarlo.com.au/",
+      githubUrl: undefined,
+      stars: undefined,
     },
     {
       title: "RG Travel & Tours",
       description:
         "A modern travel services website built with Next.js and Tailwind CSS, featuring smooth interactive UI, analytics integration, and optimized performance for bookings and information.",
-      image: "/placeholder.svg?height=300&width=500&text=RG+Travel",
+      image: "/rg.png",
       tags: ["Next.js", "React", "Tailwind CSS", "Google Analytics", "GTM", "Framer Motion"],
       category: "Next.js",
       featured: true,
-      year: "2025",
+      // year: "2025",
       liveUrl: "https://rgtravelandtours.com/",
+      githubUrl: undefined,
+      stars: undefined,
     },
     {
       title: "Tia & Rose",
       description:
         "An eCommerce fashion store built on Shopify, optimized for conversions with secure payment integrations, analytics tracking, and a smooth, responsive shopping experience.",
-      image: "/placeholder.svg?height=300&width=500&text=Tia+Rose",
+      image: "/story.png",
       tags: [
         "Shopify",
         "Ecommerce",
@@ -49,73 +53,38 @@ export default function ProjectsPage() {
         "Cloudflare"
       ],
       category: "Shopify",
-      featured: false,
-      year: "2023",
+      featured: true,
+      // year: "2023",
       liveUrl: "https://tiaandrose.com/",
+      githubUrl: undefined,
+      stars: undefined,
     },
     {
-      title: "Portfolio Website",
-      description:
-        "Modern personal portfolio built with Next.js 16, featuring 3D Spline animations, smooth page transitions, and a responsive design.",
-      image: "/placeholder.svg?height=300&width=500&text=Portfolio",
-      tags: ["Next.js", "React", "Tailwind CSS", "Spline", "TypeScript"],
-      category: "Next.js",
-      featured: false,
-      year: "2024",
-      liveUrl: "#",
-      githubUrl: "https://github.com/hadiaalv",
-    },
-    {
-      title: "E-Commerce Dashboard",
-      description:
-        "Full-stack admin dashboard for managing e-commerce operations with real-time analytics, inventory management, and order tracking.",
-      image: "/placeholder.svg?height=300&width=500&text=Dashboard",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js", "Express"],
-      category: "Full Stack",
-      featured: false,
-      year: "2024",
-      stars: 156,
-      githubUrl: "https://github.com/hadiaalv",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "Collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.",
-      image: "/placeholder.svg?height=300&width=500&text=Task+Manager",
-      tags: ["React", "Firebase", "Material-UI", "Real-time", "Authentication"],
-      category: "React",
-      featured: false,
-      year: "2024",
-      stars: 89,
-      githubUrl: "https://github.com/hadiaalv",
-    },
-    {
-      title: "Weather App",
-      description:
-        "Beautiful weather application with location detection, 7-day forecast, and interactive weather maps using modern APIs.",
-      image: "/placeholder.svg?height=300&width=500&text=Weather",
-      tags: ["React", "API Integration", "Geolocation", "Charts"],
-      category: "React",
-      featured: false,
-      year: "2023",
-      stars: 234,
-      liveUrl: "#",
-      githubUrl: "https://github.com/hadiaalv",
-    },
-    {
-      title: "Blog Platform",
-      description:
-        "Modern blogging platform with markdown support, user authentication, comment system, and SEO optimization.",
-      image: "/placeholder.svg?height=300&width=500&text=Blog",
-      tags: ["Next.js", "MongoDB", "Authentication", "Markdown", "SEO"],
-      category: "Next.js",
-      featured: false,
-      year: "2023",
-      githubUrl: "https://github.com/hadiaalv",
-    },
+  title: "BlacKandleS",
+  description:
+    "An eCommerce fashion and lifestyle store built on Shopify, featuring analytics tracking, A/B testing, multiple secure payment options, and optimized for performance with Cloudflare and modern web standards.",
+  image: "/black.png",
+  tags: [
+    "Shopify",
+    "Google Analytics",
+    "GA4",
+    "BugSnag",
+    "Cloudflare",
+    "Payment Gateways",
+    "Trident AB",
+    "core-js"
+  ],
+  category: "Shopify",
+  featured: true,
+  // year: "2023",
+  liveUrl: "https://www.blackandles.com.au/",
+  githubUrl: undefined,
+  stars: undefined,
+}
+
   ]
 
-  const categories = ["All", "WordPress", "Shopify", "Next.js", "React", "Full Stack"]
+  const categories = ["All", "WordPress", "Next.js", "Shopify"]
 
   const filteredProjects = selectedFilter === "All" 
     ? allProjects 
@@ -205,20 +174,15 @@ export default function ProjectsPage() {
                   </p>
 
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.slice(0, 4).map((tag) => (
+                    {project.tags.map((tag) => (
                       <Badge
                         key={tag}
                         variant="secondary"
-                        className="text-xs bg-gray-100 hover:bg-cyan-50 hover:text-cyan-600 transition-colors"
+                        className="text-xs"
                       >
                         {tag}
                       </Badge>
                     ))}
-                    {project.tags.length > 4 && (
-                      <Badge variant="secondary" className="text-xs">
-                        +{project.tags.length - 4}
-                      </Badge>
-                    )}
                   </div>
 
                   <div className="flex space-x-3 pt-2">
