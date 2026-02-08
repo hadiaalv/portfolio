@@ -81,7 +81,7 @@ export default function ProjectsPage() {
     "Semantic Analysis"
   ],
   category: "AI / Education",
-  featured: true,
+  
   year: "2026",
     },
 
@@ -101,7 +101,7 @@ export default function ProjectsPage() {
     "core-js"
   ],
   category: "Shopify",
-  featured: true,
+  
   year: "2025",
   liveUrl: "https://www.blackandles.com.au/",
 }
