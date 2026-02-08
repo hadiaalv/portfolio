@@ -9,7 +9,7 @@ import { ArrowRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-rea
 export function HeroSection() {
   const handleResumeDownload = () => {
     const link = document.createElement("a")
-    link.href = "/HadiaAlvi.pdf" 
+    link.href = "/Hadia Alvi.pdf" 
     link.download = "Hadia_Alvi_Resume.pdf" 
     link.click()
   }
@@ -43,13 +43,13 @@ export function HeroSection() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
+                {/* <Button
                   size="lg"
                   className="bg-cyan-500 hover:bg-cyan-600 text-white border-cyan-500 hover:border-cyan-600 transition-all duration-300 animate-glow group"
                 >
                   View My Work
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                </Button> */}
                 <div className="flex gap-2">
                   <Button
                     variant="outline"
