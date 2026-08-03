@@ -10,6 +10,14 @@ export function ServicesSection() {
 
   const services = [
     {
+      icon: Brain,
+      title: "AI Automation",
+      description: "Intelligent automation solutions that streamline repetitive tasks, connect your tools, and make your operations faster with AI-powered workflows and assistants.",
+      features: ["Workflow Automation", "LLM Integration", "Smart Assistants", "Process Optimization"],
+      color: "text-indigo-500",
+      bgColor: "bg-indigo-500/10",
+    },
+    {
       icon: Code2,
       title: "React & Next.js Development",
       description: "Custom web applications built with React and Next.js for optimal performance, SEO, and user experience. Server-side rendering, static generation, and modern React patterns.",
