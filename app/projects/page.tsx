@@ -134,6 +134,30 @@ export default function ProjectsPage() {
   liveUrl: "https://www.dreamital.com/",
 },
 
+{
+  title: "Rosanna Faraci Photography",
+  description:
+    "A professional photography portfolio and booking website built with WordPress for an Australian photographer. The website showcases photography services, portfolios, model handbooks, skincare products, and online booking while delivering a responsive user experience, optimized performance, and seamless client communication through an integrated WhatsApp contact feature.",
+  image: "/r.png",
+  tags: [
+    "WordPress",
+    "Astra",
+    "PHP",
+    "MySQL",
+    "Gutenberg",
+    "Spectra",
+    "Photo Gallery",
+    "jQuery",
+    "Hostinger",
+    "Responsive Design",
+    "WhatsApp Integration",
+    "Performance Optimization"
+  ],
+  category: "Photography",
+  featured: false,
+  year: "2026",
+  liveUrl: "https://rosannafaraci.com/",
+},
     {
   title: "BlacKandleS",
   description:
