@@ -104,10 +104,34 @@ export default function ProjectsPage() {
     "Performance Optimization",
     "LiteSpeed"
   ],
-  category: "Business Consulting",
+  category: "WordPress",
   featured: false,
   year: "2026",
-  demo: "https://nathancoxconsulting.com.au/",
+  liveUrl: "https://nathancoxconsulting.com.au/",
+},
+{
+  title: "Dreamital",
+  description:
+    "A modern, high-performance digital agency website built with Next.js and React, showcasing web development, AI solutions, Shopify, WordPress, and digital transformation services. Designed with a responsive, animation-rich user interface using Tailwind CSS and Framer Motion, the website delivers an engaging user experience while maintaining excellent performance, SEO, and accessibility.",
+  image: "/HR.png",
+  tags: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Lucide React",
+    "Vercel",
+    "Responsive Design",
+    "SEO",
+    "Performance Optimization",
+    "UI/UX",
+    "Open Graph"
+  ],
+  category: "Next.js",
+  featured: true,
+  year: "2026",
+  liveUrl: "https://www.dreamital.com/",
 },
 
     {
@@ -133,7 +157,7 @@ export default function ProjectsPage() {
 
   ]
 
-  const categories = ["All", "WordPress", "Next.js", "Shopify", "AI / Education"]
+  const categories = ["All", "WordPress", "Next.js", "Shopify", "AI / Education", "AI Automation"]
 
   const filteredProjects = selectedFilter === "All" 
     ? allProjects 
