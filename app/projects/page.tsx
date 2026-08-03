@@ -153,7 +153,7 @@ export default function ProjectsPage() {
     "WhatsApp Integration",
     "Performance Optimization"
   ],
-  category: "Photography",
+  category: "WordPress",
   featured: false,
   year: "2026",
   liveUrl: "https://rosannafaraci.com/",
