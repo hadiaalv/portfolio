@@ -86,6 +86,31 @@ export default function ProjectsPage() {
     },
 
     {
+  title: "Nathan Cox Consulting",
+  description:
+    "A high-performance business consulting website built with WordPress and the Astra theme for an Australian FMCG and retail growth consultancy. The website showcases consulting services, brand strategy, international expansion expertise, client success stories, SEO optimization, lead generation, and newsletter integration while delivering fast performance and a responsive user experience.",
+  image: "/nc.png",
+  tags: [
+    "WordPress",
+    "Astra",
+    "PHP",
+    "MySQL",
+    "Hostinger",
+    "All in One SEO",
+    "Google Site Kit",
+    "Google Analytics",
+    "reCAPTCHA",
+    "Responsive Design",
+    "Performance Optimization",
+    "LiteSpeed"
+  ],
+  category: "Business Consulting",
+  featured: false,
+  year: "2026",
+  demo: "https://nathancoxconsulting.com.au/",
+},
+
+    {
   title: "BlacKandleS",
   description:
     "An eCommerce fashion and lifestyle store built on Shopify, featuring analytics tracking, A/B testing, multiple secure payment options, and optimized for performance with Cloudflare and modern web standards.",
